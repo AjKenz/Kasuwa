@@ -11,6 +11,8 @@ export function Footer() {
           </div>
           <p className="text-xs text-stone-400">
             A learning project. Listings and buyers shown here are fictional.
+            {" · "}
+            env: {process.env.NEXT_PUBLIC_APP_ENV ?? "not set"}
           </p>
         </div>
       </div>

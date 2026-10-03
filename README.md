@@ -44,6 +44,15 @@ Six routes, all composed from small components under `src/components/`:
 - `/sell/dashboard` — seller's listing table
 - `/sell/new` — photo upload → mock AI draft generation → listing editor with locale tabs
 - `/admin` — operator dashboard (cost, error rate, queue depth)
+- `/api/health` and `/api/cron/cleanup` — both GET endpoints. `/api/health` returns the
+  app's version and the current time; `/api/cron/cleanup` is triggered once a day by a
+  Vercel cron job (see `vercel.json`).
+
+Both run on the Node runtime, not Edge. Edge's latency benefit comes from running close to
+*the caller* — useful for a real person's browser request, but irrelevant for the cron job,
+which is only ever called by Vercel's own scheduler, not a geographically distributed user.
+Node also keeps the door open for both routes to use real Node APIs and database drivers
+later (cleanup jobs tend to need database access, which Edge supports poorly).
 
 Plus a floating shopping-assistant chat panel available on the storefront.
 

@@ -1,5 +1,9 @@
 # apps/api
 
-Not built yet. This will hold the TypeScript Lambda handlers (auth, listings, products, chat tool calls), bundled with esbuild.
+TypeScript Lambda handlers, bundled with esbuild into a single file per handler (`dist/`, gitignored — AWS gets the built output, not the source).
 
-Arrives in Track A, starting at level **A4** (first Lambda by hand), then formalised into Terraform at **A5**.
+- `src/handlers/products.ts` — `GET /products`, returns mock JSON. Deployed by hand to a Lambda with a Function URL at Track A level **A4**; rebuilt as Terraform-managed infrastructure at level **A5**.
+
+```bash
+npm run build -w apps/api   # bundles to apps/api/dist/products.js
+```

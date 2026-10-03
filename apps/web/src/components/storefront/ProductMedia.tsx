@@ -14,12 +14,12 @@ export function ProductMedia({
   return (
     <div
       className={cn(
-        "flex items-center justify-center bg-gradient-to-br",
+        "bg-weave relative flex items-center justify-center overflow-hidden bg-linear-to-br",
         theme.gradient,
         className,
       )}
     >
-      <span className="text-4xl" aria-hidden>
+      <span className="text-5xl drop-shadow-sm" aria-hidden>
         {theme.emoji}
       </span>
       {variant === "lifestyle" ? (

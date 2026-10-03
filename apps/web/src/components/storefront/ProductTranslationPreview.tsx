@@ -15,7 +15,7 @@ export function ProductTranslationPreview({ translations }: { translations: Prod
         if (!t) return null;
         return (
           <div dir={t.locale === "ar" ? "rtl" : "ltr"}>
-            <h2 className="text-lg font-semibold text-stone-900">{t.title}</h2>
+            <h2 className="font-display text-2xl font-semibold text-stone-900">{t.title}</h2>
             <p className="mt-2 text-sm leading-relaxed text-stone-600">{t.description}</p>
           </div>
         );

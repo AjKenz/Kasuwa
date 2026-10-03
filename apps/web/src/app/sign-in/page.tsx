@@ -5,14 +5,16 @@ import { Button } from "@/components/ui/Button";
 
 export default function SignInPage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-stone-50 px-4">
-      <Card className="w-full max-w-sm">
+    <div className="bg-weave flex min-h-screen items-center justify-center bg-sand px-4">
+      <Card className="w-full max-w-sm shadow-md">
         <CardBody className="space-y-5 py-8">
           <div className="text-center">
             <Link href="/" className="text-2xl" aria-hidden>
               🧺
             </Link>
-            <h1 className="mt-2 text-lg font-semibold text-stone-900">Sign in to Kasuwa</h1>
+            <h1 className="font-display mt-2 text-xl font-semibold text-stone-900">
+              Sign in to Kasuwa
+            </h1>
             <p className="mt-1 text-sm text-stone-500">
               UI only for now — real auth lands at Track A level A1.
             </p>

@@ -10,12 +10,12 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <Link
       href={`/products/${product.id}`}
-      className="group overflow-hidden rounded-xl border border-stone-200 bg-white transition-shadow hover:shadow-md"
+      className="group overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
     >
       <ProductMedia category={product.category} className="h-40 w-full" />
-      <div className="space-y-1.5 p-3">
+      <div className="space-y-1.5 p-4">
         <div className="flex items-start justify-between gap-2">
-          <h3 className="line-clamp-2 text-sm font-medium text-stone-900 group-hover:text-amber-700">
+          <h3 className="font-display line-clamp-2 text-base font-medium text-stone-900 group-hover:text-amber-800">
             {title}
           </h3>
           {product.status === "draft" ? <Badge tone="warning">Draft</Badge> : null}
@@ -23,7 +23,7 @@ export function ProductCard({ product }: { product: Product }) {
         <PriceTag
           priceMinor={product.priceMinor}
           currency={product.currency}
-          className="text-sm font-semibold text-stone-900"
+          className="text-sm font-semibold text-amber-900"
         />
         <p className="text-xs text-stone-500">{product.sellerName}</p>
       </div>

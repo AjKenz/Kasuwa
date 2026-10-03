@@ -17,14 +17,14 @@ export function DashboardShell({
   children: ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-stone-50">
+    <div className="min-h-screen bg-sand-dim">
       <div className="mx-auto flex max-w-6xl">
-        <aside className="hidden w-56 shrink-0 border-e border-stone-200 px-3 py-6 sm:block">
+        <aside className="hidden w-56 shrink-0 border-e border-amber-900/10 bg-sand px-3 py-6 sm:block">
           <Link href="/" className="mb-6 flex items-center gap-2 px-2">
             <span className="text-lg" aria-hidden>
               🧺
             </span>
-            <span className="font-semibold text-stone-900">Kasuwa</span>
+            <span className="font-display font-semibold text-stone-900">Kasuwa</span>
           </Link>
           <p className="px-2 pb-2 text-xs font-semibold uppercase tracking-wide text-stone-400">
             {title}
@@ -34,7 +34,7 @@ export function DashboardShell({
               <Link
                 key={item.href}
                 href={item.href}
-                className="flex items-center gap-2 rounded-md px-2 py-1.5 text-sm font-medium text-stone-600 hover:bg-stone-100 hover:text-stone-900"
+                className="flex items-center gap-2 rounded-lg px-2 py-1.5 text-sm font-medium text-stone-600 hover:bg-white hover:text-amber-900 hover:shadow-sm"
               >
                 <span aria-hidden>{item.icon}</span>
                 {item.label}

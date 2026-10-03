@@ -1,18 +1,20 @@
 import { PRODUCTS } from "@/lib/mock-data";
 import { StorefrontBrowser } from "@/components/storefront/StorefrontBrowser";
+import { MarketHero } from "@/components/storefront/MarketHero";
 
 export default function HomePage() {
   const published = PRODUCTS.filter((p) => p.status === "published");
 
   return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-semibold text-stone-900">Kasuwa Market</h1>
-        <p className="mt-1 text-sm text-stone-500">
-          Fresh listings from sellers across Nigeria, translated for every buyer.
-        </p>
+    <div>
+      <MarketHero />
+      <div className="mx-auto max-w-6xl space-y-6 px-4 py-10 sm:px-6">
+        <div className="flex items-end justify-between">
+          <h2 className="font-display text-2xl font-semibold text-stone-900">Fresh listings</h2>
+          <p className="text-sm text-stone-500">{published.length} products today</p>
+        </div>
+        <StorefrontBrowser products={published} />
       </div>
-      <StorefrontBrowser products={published} />
     </div>
   );
 }

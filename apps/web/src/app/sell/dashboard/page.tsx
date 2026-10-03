@@ -12,7 +12,7 @@ export default function SellerDashboardPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-semibold text-stone-900">My listings</h1>
+          <h1 className="font-display text-2xl font-semibold text-stone-900">My listings</h1>
           <p className="mt-1 text-sm text-stone-500">
             Manage what buyers see in English, French and Arabic.
           </p>

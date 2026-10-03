@@ -6,7 +6,7 @@ export default function OperatorDashboardPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-xl font-semibold text-stone-900">Operator dashboard</h1>
+        <h1 className="font-display text-2xl font-semibold text-stone-900">Operator dashboard</h1>
         <p className="mt-1 text-sm text-stone-500">
           Cost, errors and queue depth — this is what the game day in level A10 breaks on purpose.
         </p>

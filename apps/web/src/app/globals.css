@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --color-sand: #faf6ee;
-  --color-sand-dim: #f3ecdd;
-  --color-ink: #2a2118;
+  --sand: #faf6ee;
+  --sand-dim: #f3ecdd;
+  --ink: #2a2118;
 }
 
 @theme inline {
-  --color-sand: var(--color-sand);
-  --color-sand-dim: var(--color-sand-dim);
-  --color-ink: var(--color-ink);
+  --color-sand: var(--sand);
+  --color-sand-dim: var(--sand-dim);
+  --color-ink: var(--ink);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-display: var(--font-fraunces);

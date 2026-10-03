@@ -10,7 +10,7 @@ export function Footer() {
             <span className="font-display text-lg font-semibold text-sand">Kasuwa</span>
           </div>
           <p className="text-xs text-stone-400">
-            A learning project. Listings and buyers shown here are fictional.
+            A learning project(test). Listings and buyers shown here are fictional.
             {" · "}
             env: {process.env.NEXT_PUBLIC_APP_ENV ?? "not set"}
           </p>
